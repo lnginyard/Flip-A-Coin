@@ -1,0 +1,109 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Rubik", sans-serif;
+}
+
+body {
+    border-top: 30%;
+    height: 60%;
+    background: linear-gradient( to right, #8e8e92 20%, #5c5c5e 20%, #040505 50%) fixed;
+}
+
+.container {
+    flex-direction: column;
+    background-color: #faf6f6;
+    width: 400px;
+    padding: 10px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 40%;
+    left: 40%;
+    box-shadow: 15px 30px 35px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    -webkit-perspective: 300px;
+    perspective: 300px;
+}
+
+.stats {
+    text-align: center;
+    margin-top: 10px;
+    font-style: oblique angle 5, 2;
+    color: #101020;
+    font-weight: 500;
+    line-height: 25px;
+}
+
+.coin {
+    height: 150px;
+    width: 150px;
+    position: relative;
+    margin: 50px auto;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.coin img {
+    width: 145px;
+}
+
+.heads,
+.tails {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.tails {
+    transform: rotateX(180deg);
+}
+
+@keyframes spin-tails {
+    0% {
+        transform: rotateX(0);
+    }
+    100% {
+        transform: rotateX(1980deg);
+    }
+}
+
+@keyframes spin-heads {
+    0% {
+        transform: rotateX(0);
+    }
+    100% {
+        transform: rotateX(2160deg);
+    }
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    width: 120px;
+    padding: 10px 0;
+    border: 2.5px solid #141416;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#flip-button {
+    background-color: #0d0d0f;
+    color: #ffffff;
+}
+
+#flip-button:disabled {
+    background-color: #e1e0ee;
+    border-color: #f7faf6;
+    color: #101020;
+}
+
+#reset-button {
+    background-color: #ffffff;
+    color: #161414;
+}

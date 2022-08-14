@@ -1,0 +1,13 @@
+{
+    "folders": [
+		{
+			"name": "images",
+			"path": "../../../Downloads/Flip A Coin/images"
+		},
+		{
+			"name": "Flip-A-Coin",
+			"path": "."
+		}
+	],
+    "settings": {}
+}
